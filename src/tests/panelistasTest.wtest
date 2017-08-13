@@ -1,0 +1,7 @@
+import panelistas.*
+
+describe "horacioPaganiTest" {
+	test "empieza calmado" {
+		assert.notThat(horacioPagani.estaCaliente())
+	}
+}
