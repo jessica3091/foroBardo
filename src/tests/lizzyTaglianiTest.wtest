@@ -1,0 +1,8 @@
+import panelistas.lizzyTagliani
+
+describe "lizzyTaglianiTest"{
+	test "eleva la voz y no esta de mal humor" {
+		lizzyTagliani.elevarVoz()
+		assert.notThat(lizzyTagliani.estaDeMalhumor())
+	}
+}

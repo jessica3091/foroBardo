@@ -1,0 +1,29 @@
+import panelistas.horacioPagani
+
+describe "horacioPaganiTest" {
+	test "empieza calmado" {
+		assert.notThat(horacioPagani.estaCaliente())
+	}
+	
+	test "eleva una vez la voz y aun sigue calmado" {
+		horacioPagani.elevarVoz()
+		assert.notThat(horacioPagani.estaCaliente())
+	}
+	
+	test "vuelve a elevar la voz y termina caliente" {
+		horacioPagani.elevarVoz()
+		assert.equals(horacioPagani.estaCaliente())
+	}
+	
+	test "toma agua y vuelve a calmarse"{
+		horacioPagani.tomarAgua()
+		assert.notThat(horacioPagani.estaCaliente())
+	}
+	
+	test "vuelve a elevar la voz pero se calma unos minutos"{
+		horacioPagani.elevarVoz()
+		horacioPagani.calmarse(14)
+		assert.notThat(horacioPagani.estaCaliente())
+	}
+	
+}
