@@ -1,8 +1,10 @@
-import conductores.polino
+import conductores.*
+import panelistas.*
 
-describe "ejemplo" {
+describe "ConductoresTests" {
 
-	test "Polino es polino" {
-		assert.equals(polino, polino)
+	test "Fantino hacerOpinarDeDeportesA horacioPagani.Horacio esta calmado." {
+		fantino.hacerOpinarDeDeportesA(horacioPagani)
+		assert.notThat(horacioPagani.estaCaliente())
 	}
 }

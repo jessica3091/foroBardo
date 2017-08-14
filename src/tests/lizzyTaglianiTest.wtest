@@ -5,4 +5,16 @@ describe "lizzyTaglianiTest"{
 		lizzyTagliani.elevarVoz()
 		assert.notThat(lizzyTagliani.estaDeMalhumor())
 	}
+	
+	test "Vuelva a elevar la voz, toma agua y no esta de mal humor" {
+		lizzyTagliani.elevarVoz()
+		lizzyTagliani.tomarAgua()
+		assert.notThat(lizzyTagliani.estaDeMalhumor())
+	}
+	
+	test "Sigue elevando la voz, se calma unos minutos y no esta de mal humor" {
+		lizzyTagliani.elevarVoz()
+		lizzyTagliani.calmarse(28)
+		assert.notThat(lizzyTagliani.estaDeMalhumor())
+	}
 }
